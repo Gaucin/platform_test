@@ -1,8 +1,9 @@
 from django.urls import path
 
-from account.api.views import CustomerLoginView
+from events.api.views import EventView, PublicEventsView
 
 
 urlpatterns = [
-    path("", CustomerLoginView.as_view()),
+    path("", EventView.as_view()),
+    path("public/", PublicEventsView.as_view()),
 ]

@@ -1,6 +1,8 @@
 from django.urls import path
 
+from booking.api.views import BookingView
+
 
 urlpatterns = [
-    path("", LoginGuestView.as_view()),
+    path("", BookingView.as_view()),
 ]

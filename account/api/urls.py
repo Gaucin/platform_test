@@ -4,5 +4,5 @@ from account.api.views import CustomerLoginView
 
 
 urlpatterns = [
-    path("", CustomerLoginView.as_view()),
+    path("login/", CustomerLoginView.as_view()),
 ]
