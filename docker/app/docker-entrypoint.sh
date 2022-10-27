@@ -16,7 +16,7 @@ run_migrations() {
     done
 
     echo "Running migrations"
-    # python manage.py migrate --no-input
+    python manage.py migrate --no-input
 }
 
 case "$CMD" in
