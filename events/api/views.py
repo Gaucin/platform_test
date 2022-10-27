@@ -10,7 +10,7 @@ class EventView(ListCreateAPIView):
 
 
 class PublicEventsView(ListAPIView):
-    queryset = Event.objects.all()
+    queryset = Event.objects.filter(type=1)
     serializer_class = EventSerializer
 
     def filter_queryset(self, queryset):
