@@ -4,7 +4,10 @@ from events.models import Event
 
 
 class EventSerializer(ModelSerializer):
-
     class Meta:
         model = Event
-        fields = ("description", "type_", "room",)
+        fields = (
+            "description",
+            "type_",
+            "room",
+        )

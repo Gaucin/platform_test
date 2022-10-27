@@ -16,7 +16,7 @@ run_migrations() {
     done
 
     echo "Running migrations"
-    python manage.py migrate --no-input
+    # python manage.py migrate --no-input
 }
 
 case "$CMD" in
@@ -24,7 +24,7 @@ case "$CMD" in
         run_migrations
 
         echo "Starting server"
-        exec gunicorn -c $GUNICORN_CONF buro.wsgi
+        exec gunicorn -c $GUNICORN_CONF $APP_WSGI
         ;;
     "collectstatic" )
         collect_static

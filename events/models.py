@@ -7,5 +7,5 @@ from rooms.models import Room
 
 class Event(models.Model):
     description = models.CharField(max_length=60)
-    type_ = models.IntegerField(choices=EVENT_TYPES)
+    type = models.IntegerField(choices=EVENT_TYPES)
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
