@@ -10,7 +10,7 @@ collect_static() {
 
 run_migrations() {
     echo "Checking database status"
-    until pg_isready -h $DB_HOST -p $DB_PORT -U $DB_USER; do
+    until pg_isready -h $POSTGRES_SERVER -p $POSTGRES_PORT -U $POSTGRES_USER; do
         echo "Database is not running"
         sleep 1
     done

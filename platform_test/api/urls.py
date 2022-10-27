@@ -2,8 +2,8 @@ from django.urls import include, path
 
 
 urlpatterns = [
-    path("rooms/", include("cabs.api.urls")),
-    path("events/", include("trips.api.urls")),
-    path("booking/", include("trips.api.urls")),
+    path("rooms/", include("rooms.api.urls")),
+    path("events/", include("events.api.urls")),
+    path("booking/", include("booking.api.urls")),
     path("account/", include("account.api.urls")),
 ]
