@@ -40,8 +40,6 @@ RUN apk --purge del .build-deps
 
 # USER ${APP_USER}
 
-EXPOSE ${PORT}
-
 ENTRYPOINT [ "/app/docker/app/docker-entrypoint.sh" ]
 
 CMD ["runserver"]
